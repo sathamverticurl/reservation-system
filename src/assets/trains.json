@@ -1,0 +1,158 @@
+[
+    {
+        "trainName": "Palaruvi Express (16171)",
+        "runsOn": "M T W T F S S",
+        "time": {
+            "fromTime": "23:50",
+            "toTime": "09:00"
+        },
+        "stn": {
+            "fromStn": "Ambasamudram",
+            "toStn": "Ernakulam"
+        },
+        "date": {
+            "fromDate": "21-Nov-2021",
+            "toDate": "22-Nov-2021"
+        },
+        "duration": "09:50",
+        "coaches": {
+            "sleeper": {
+                "name": "Sleeper (SL)",
+                "availableSeats": "200",
+                "price": "250"
+            },
+            "ac3": {
+                "name": "AC 3-Tier (AC-3)",
+                "availableSeats": "200",
+                "price": "500"
+            },
+            "ac2": {
+                "name": "AC 2-Tier (AC-2)",
+                "availableSeats": "400",
+                "price": "750"
+            },
+            "ac1": {
+                "name": "AC 1-Tier (AC-1)",
+                "availableSeats": "300",
+                "price": "1000"
+            }
+        }
+    },
+    {
+        "trainName": "Nellai Express (20984)",
+        "runsOn": "M T W T F S S",
+        "time": {
+            "fromTime": "23:50",
+            "toTime": "09:00"
+        },
+        "stn": {
+            "fromStn": "Ambasamudram",
+            "toStn": "Ernakulam"
+        },
+        "date": {
+            "fromDate": "21-Nov-2021",
+            "toDate": "22-Nov-2021"
+        },
+        "duration": "09:50",
+        "coaches": {
+            "sleeper": {
+                "name": "Sleeper (SL)",
+                "availableSeats": "200",
+                "price": "250"
+            },
+            "ac3": {
+                "name": "AC 3-Tier (AC-3)",
+                "availableSeats": "200",
+                "price": "500"
+            },
+            "ac2": {
+                "name": "AC 2-Tier (AC-2)",
+                "availableSeats": "400",
+                "price": "750"
+            },
+            "ac1": {
+                "name": "AC 1-Tier (AC-1)",
+                "availableSeats": "300",
+                "price": "1000"
+            }
+        }
+    },
+    {
+        "trainName": "Chennai Express (16172)",
+        "runsOn": "M T W T F S S",
+        "time": {
+            "fromTime": "23:50",
+            "toTime": "09:00"
+        },
+        "stn": {
+            "fromStn": "Ambasamudram",
+            "toStn": "Ernakulam"
+        },
+        "date": {
+            "fromDate": "21-Nov-2021",
+            "toDate": "22-Nov-2021"
+        },
+        "duration": "09:50",
+        "coaches": {
+            "sleeper": {
+                "name": "Sleeper (SL)",
+                "availableSeats": "200",
+                "price": "250"
+            },
+            "ac3": {
+                "name": "AC 3-Tier (AC-3)",
+                "availableSeats": "200",
+                "price": "500"
+            },
+            "ac2": {
+                "name": "AC 2-Tier (AC-2)",
+                "availableSeats": "400",
+                "price": "750"
+            },
+            "ac1": {
+                "name": "AC 1-Tier (AC-1)",
+                "availableSeats": "300",
+                "price": "1000"
+            }
+        }
+    },
+    {
+        "trainName": "Mumbai Express (16131)",
+        "runsOn": "M T W T F S S",
+        "time": {
+            "fromTime": "23:50",
+            "toTime": "09:00"
+        },
+        "stn": {
+            "fromStn": "Ambasamudram",
+            "toStn": "Ernakulam"
+        },
+        "date": {
+            "fromDate": "21-Nov-2021",
+            "toDate": "22-Nov-2021"
+        },
+        "duration": "09:50",
+        "coaches": {
+            "sleeper": {
+                "name": "Sleeper (SL)",
+                "availableSeats": "200",
+                "price": "250"
+            },
+            "ac3": {
+                "name": "AC 3-Tier (AC-3)",
+                "availableSeats": "200",
+                "price": "500"
+            },
+            "ac2": {
+                "name": "AC 2-Tier (AC-2)",
+                "availableSeats": "400",
+                "price": "750"
+            },
+            "ac1": {
+                "name": "AC 1-Tier (AC-1)",
+                "availableSeats": "300",
+                "price": "1000"
+            }
+        }
+    }
+]

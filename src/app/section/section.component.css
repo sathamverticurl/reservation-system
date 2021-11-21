@@ -2,21 +2,16 @@ section {
     position: fixed;
     top: 44px;
     left: 16.66%;
-	height: 100vh;
+	height: 100%;
     width: 83.33%;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    overflow: scroll;
 }
 .row {
     justify-content: space-between;
 }
 .leftDiv {
     width: 40%;
-}
-.rightDiv {
-    width: 58%;
-    font-size: 14px;
-    justify-content: center;
-    align-items: center;
 }
 .leftDiv, .rightDiv {
     border: 1px solid gray;
@@ -39,4 +34,42 @@ label, select, input {
 .loading {
     color: green;
     font-weight: 600;
+}
+.rightDiv {
+    width: 58%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+.resultDiv {
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+    /* margin-bottom: 15px; */
+}
+.resultDiv:last-child {
+    margin-bottom: 75px;
+}
+.trainDetails {
+    display: flex;
+    align-items: center;
+}
+.trainTime p {
+    display: inline-block;
+}
+.coaches div {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+}
+.selected {
+    background: lightblue;
+}
+.book button {
+    width: 75px;
+}
+.emptyData {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
 }

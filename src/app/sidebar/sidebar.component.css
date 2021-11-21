@@ -7,19 +7,19 @@ aside {
 	background: whitesmoke;
 }
 .sidebar li {
-    background: white;
     padding: 10px;
     margin: 5px;
     font-size: 14px;
     border-radius: 5px;
 }
 .sidebar li.active {
-    background: #2e89d8;
+    background: #cb3256;
 }
 .sidebar li.active a {
     color: white;
 }
 .sidebar li a {
-    color: black;
+    color: #cb3256;
     cursor: pointer;
+    font-weight: 600;
 }

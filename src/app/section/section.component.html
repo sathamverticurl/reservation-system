@@ -1,13 +1,15 @@
 <section>
   <div class="container">
-    <div class="row">
-      <div class="leftDiv col-s-12">
+    <div>
+      <div class="leftDiv col-s-12 left">
         <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <h2 class="title text-center">Book Ticket</h2>
           </div>
           <div class="form-group col-s-12 col-m-12 col-l-12">
-            <label class="col-s-12 col-m-3 col-l-3 text-left">From</label>
+            <label class="col-s-12 col-m-3 col-l-3 text-left"
+              >From <span class="required">*</span></label
+            >
             <select class="col-s-12 col-m-9 col-l-9" formControlName="fromStn">
               <option
                 *ngFor="let station of stationLists"
@@ -16,9 +18,17 @@
                 {{ station.value }}
               </option>
             </select>
+            <div
+              class="text-right"
+              *ngIf="!checkoutForm?.pristine && checkoutForm?.controls?.['fromStn']?.errors?.['required']"
+            >
+              <label class="required">Required</label>
+            </div>
           </div>
           <div class="form-group col-s-12 col-m-12 col-l-12">
-            <label class="col-s-12 col-m-3 col-l-3 text-left">To</label>
+            <label class="col-s-12 col-m-3 col-l-3 text-left"
+              >To <span class="required">*</span></label
+            >
             <select class="col-s-12 col-m-9 col-l-9" formControlName="toStn">
               <option
                 *ngFor="let station of stationLists"
@@ -27,23 +37,98 @@
                 {{ station.value }}
               </option>
             </select>
+            <div
+              class="text-right"
+              *ngIf="!checkoutForm?.pristine && checkoutForm?.controls?.['toStn']?.errors?.['required']"
+            >
+              <label class="required">Required</label>
+            </div>
           </div>
           <div class="form-group col-s-12 col-m-12 col-l-12">
-            <label class="col-s-12 col-m-3 col-l-3 text-left">DD/MM/YYYY</label>
+            <label class="col-s-12 col-m-3 col-l-3 text-left"
+              >DD/MM/YYYY <span class="required">*</span></label
+            >
             <input
               class="col-s-12 col-m-9 col-l-9"
               type="date"
               value="{{ travelDate }}"
               formControlName="travelDate"
             />
+            <div
+              class="text-right"
+              *ngIf="!checkoutForm?.pristine && checkoutForm?.controls?.['travelDate']?.errors?.['required']"
+            >
+              <label class="required">Required</label>
+            </div>
           </div>
           <div class="form-group text-right col-s-12 col-m-12 col-l-12">
-            <button type="submit" class="search">Search</button>
+            <button
+              type="submit"
+              class="search"
+              [class.disabled]="checkoutForm.invalid"
+            >
+              Search
+            </button>
           </div>
-          <div class="loading text-center" *ngIf="showLoader">Loading Data...</div>
+          <div class="loading text-center" *ngIf="showLoader">
+            Loading Data...
+          </div>
         </form>
       </div>
-      <div class="rightDiv col-s-12 d-flex">No Data Found</div>
+      <div
+        class="rightDiv col-s-12 left"
+        [ngClass]="{ 'd-flex': results.length > 0 }"
+      >
+        <div class="col-s-12 col-m-12 col-l-12" *ngIf="results.length > 0; else elseBlock">
+          <div *ngFor="let result of results" class="resultDiv padding5">
+            <div class="trainDetails paddingB15">
+              <h2 class="paddingR10">{{ result?.trainName }}</h2>
+              <p>Runs On: {{ result?.runsOn }}</p>
+            </div>
+            <div class="trainTime d-flex justify-c-btwn paddingB15">
+              <p class="fromStn">
+                <strong>{{ result?.time?.fromTime }}</strong> |
+                {{ result?.stn?.fromStn }} | {{ result?.date?.fromDate }}
+              </p>
+              <p class="duration">
+                <strong>{{ result?.duration }}</strong>
+              </p>
+              <p class="toStn">
+                <strong>{{ result?.time?.toTime }}</strong> |
+                {{ result?.stn?.toStn }} | {{ result?.date?.toDate }}
+              </p>
+            </div>
+            <div class="coaches d-flex justify-c-btwn paddingB15">
+              <div class="sleeper" (click)="selectCoach('sleeper', result)" [ngClass]="{'selected': result.selectedCoach === 'sleeper'}">
+                <h4>Sleeper (SL)</h4>
+                <h4>Available (200)</h4>
+                <p>Rs. 250</p>
+              </div>
+              <div class="ac-3" (click)="selectCoach('ac-3', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-3'}">
+                <h4>AC 3-Tier (AC-3)</h4>
+                <h4>Available (200)</h4>
+                <p>Rs. 500</p>
+              </div>
+              <div class="ac-2" (click)="selectCoach('ac-2', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-2'}">
+                <h4>AC 2-Tier (AC-2)</h4>
+                <h4>Available (400)</h4>
+                <p>Rs. 750</p>
+              </div>
+              <div class="ac-1" (click)="selectCoach('ac-1', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-1'}">
+                <h4>AC 1-Tier (AC-1)</h4>
+                <h4>Available (300)</h4>
+                <p>Rs. 1000</p>
+              </div>
+            </div>
+            <div class="book text-right paddingB15">
+              <button type="button" class="search">Book</button>
+            </div>
+          </div>
+        </div>
+        <ng-template #elseBlock>
+          <div class="emptyData d-flex">No Data Found</div>
+        </ng-template>
+      </div>
     </div>
   </div>
 </section>

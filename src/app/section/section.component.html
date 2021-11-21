@@ -1,0 +1,49 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="leftDiv col-s-12">
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <h2 class="title text-center">Book Ticket</h2>
+          </div>
+          <div class="form-group col-s-12 col-m-12 col-l-12">
+            <label class="col-s-12 col-m-3 col-l-3 text-left">From</label>
+            <select class="col-s-12 col-m-9 col-l-9" formControlName="fromStn">
+              <option
+                *ngFor="let station of stationLists"
+                value="{{ station.key }}"
+              >
+                {{ station.value }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-s-12 col-m-12 col-l-12">
+            <label class="col-s-12 col-m-3 col-l-3 text-left">To</label>
+            <select class="col-s-12 col-m-9 col-l-9" formControlName="toStn">
+              <option
+                *ngFor="let station of stationLists"
+                value="{{ station.key }}"
+              >
+                {{ station.value }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-s-12 col-m-12 col-l-12">
+            <label class="col-s-12 col-m-3 col-l-3 text-left">DD/MM/YYYY</label>
+            <input
+              class="col-s-12 col-m-9 col-l-9"
+              type="date"
+              value="{{ travelDate }}"
+              formControlName="travelDate"
+            />
+          </div>
+          <div class="form-group text-right col-s-12 col-m-12 col-l-12">
+            <button type="submit" class="search">Search</button>
+          </div>
+          <div class="loading text-center" *ngIf="showLoader">Loading Data...</div>
+        </form>
+      </div>
+      <div class="rightDiv col-s-12 d-flex">No Data Found</div>
+    </div>
+  </div>
+</section>

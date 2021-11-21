@@ -1,0 +1,42 @@
+section {
+    position: fixed;
+    top: 44px;
+    left: 16.66%;
+	height: 100vh;
+    width: 83.33%;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+.row {
+    justify-content: space-between;
+}
+.leftDiv {
+    width: 40%;
+}
+.rightDiv {
+    width: 58%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+.leftDiv, .rightDiv {
+    border: 1px solid gray;
+    margin: 5px;
+    border-radius: 5px;
+}
+.title {
+    text-transform: uppercase;
+}
+form {
+    padding: 10px;
+    font-size: 14px;
+}
+.form-group {
+    padding-bottom: 10px;
+}
+label, select, input {
+    display: inline-block;
+}
+.loading {
+    color: green;
+    font-weight: 600;
+}

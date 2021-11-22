@@ -1,101 +1,118 @@
 section {
-    position: fixed;
-    top: 44px;
-    left: 16.66%;
-	height: 100%;
-    width: 83.33%;
-    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-    overflow: scroll;
+  position: fixed;
+  top: 44px;
+  left: 16.66%;
+  height: 100%;
+  width: 83.33%;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  overflow: scroll;
 }
 .row {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .leftDiv {
-    width: 40%;
+  width: 40%;
 }
-.leftDiv, .rightDiv {
-    border: 1px solid gray;
-    margin: 5px 0 5px 0;
-    border-radius: 5px;
+.leftDiv,
+.rightDiv {
+  border: 1px solid gray;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
 }
 .title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 form {
-    padding: 10px;
-    font-size: 14px;
+  padding: 10px;
+  font-size: 12px;
 }
 .form-group {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
-label, select, input {
-    display: inline-block;
+label,
+select,
+input {
+  display: inline-block;
 }
 .loading {
-    color: green;
-    font-weight: 600;
+  color: green;
+  font-weight: 600;
 }
 .rightDiv {
-    width: 58%;
-    font-size: 14px;
-    justify-content: center;
-    align-items: center;
+  width: 58%;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
 }
 .resultDiv {
-    border-bottom: 1px solid lightgray;
-    border-radius: 5px;
-    /* margin-bottom: 15px; */
+  border-bottom: 1px solid lightgray;
+  border-radius: 5px;
+  /* margin-bottom: 15px; */
 }
 .resultDiv:last-child {
-    margin-bottom: 75px;
+  margin-bottom: 75px;
 }
 .trainDetails {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .trainTime p {
-    display: inline-block;
+  display: inline-block;
 }
-@media only screen and (max-width: 600px){
-    .coaches {
-        flex-direction: column;
-    }
-    .coaches div {
-        margin-bottom: 10px;
-    }
+@media only screen and (max-width: 600px) {
+  .form-group label {
+    padding-bottom: 10px;
+  }
+  .coaches {
+    flex-wrap: wrap;
+  }
+  .coaches div {
+    width: 48%;
+    padding: 5px;
+  }
 }
-@media only screen and (min-width: 768px){
-    .coaches div {
-        padding: 0;
-    }
+@media only screen and (min-width: 768px) {
+  .coaches {
+    flex-wrap: wrap;
+  }
+  .coaches div {
+    width: 49%;
+    padding: 10px;
+  }
 }
-@media only screen and (min-width: 992px){
-    .coaches div {
-        padding: 15px;
-    }
+@media only screen and (min-width: 992px) {
+  .coaches div {
+    flex-wrap: unset;
+    padding: 15px;
+  }
 }
 .coaches div {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    cursor: pointer;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .available {
-    color: #378d37;
+  color: #378d37;
 }
 .waiting {
-    color: orange;
+  color: orange;
 }
 .selected {
-    background: lightblue;
+  background: lightblue;
 }
 .price {
-    font-size: 12px;
+  font-size: 12px;
+}
+.book {
+  position: relative;
 }
 .book button {
-    width: 75px;
+  width: 75px;
 }
 .emptyData {
-    height: 100px;
-    justify-content: center;
-    align-items: center;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
 }

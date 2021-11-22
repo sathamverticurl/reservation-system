@@ -5,3 +5,19 @@ header {
     top: 0;
     background: black;
 }
+.navBar {
+    height: 44px;
+    font-size: 14px;
+}
+ul {
+    height: 44px;
+    align-items: center; 
+    color: white;
+}
+.logo {
+    background: white;
+}
+.logo img {
+    width: auto;
+    height: 44px;
+}

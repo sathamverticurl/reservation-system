@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, VERSION } from '@angular/core';
 import {StationsService} from './../stations.service';
 import {BookingService} from './../booking.service';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -13,6 +13,10 @@ export class SectionComponent implements OnInit {
   public travelDate: any;
   public showLoader: boolean = false;
   public results: any = [];
+  public coachSelection: boolean = false;
+  public selectedIndex: number | undefined;
+  public showBookingForm: boolean = false;
+  @Input() item = '';
   constructor(
     private stations: StationsService,
     private formBuilder: FormBuilder,
@@ -30,7 +34,6 @@ export class SectionComponent implements OnInit {
     ]]
   });
   ngOnInit(): void {
-    console.log(this.results);
     this.getStationLists();
   }
   public getStationLists() {
@@ -47,5 +50,19 @@ export class SectionComponent implements OnInit {
   }
   public selectCoach(value: any, result: any) {
     result['selectedCoach'] = value;
+    this.coachSelection = false;
+  }
+  public bookTicket(data: any, index: number) {
+    this.selectedIndex = index;
+    if(data?.selectedCoach) {
+      this.showBookingForm = true;
+    } else {
+      this.coachSelection = true;
+    }
+  }
+  public closePopUp(emitData: any) {
+    this.selectedIndex = undefined;
+    this.showBookingForm = false;
+    this.results[emitData].selectedCoach = '';
   }
 }

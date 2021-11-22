@@ -1,0 +1,31 @@
+.bookTicket {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: 250px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.bookTicket form {
+    height: 100%;
+    background: white;
+    padding: 15px;
+}
+.close {
+    font-weight: 600;
+    cursor: pointer;
+    color: blue;
+}
+label {
+    display: inline-block;
+    font-weight: 600;
+}
+input {
+    width: 100%;
+}
+button {
+    width: 75px;
+}

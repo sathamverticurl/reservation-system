@@ -9,4 +9,7 @@ export class BookingService {
   public getTrains() {
     return this.http.get('/assets/trains.json');
   }
+  public bookTicket(dataObj: any) {
+    return this.http.post('https://619b74e427827600174455ec.mockapi.io/myBookings', dataObj);
+  }
 }

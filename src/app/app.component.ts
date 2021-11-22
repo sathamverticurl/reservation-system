@@ -8,7 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public title = 'Reservation System';
   constructor() {}
-  public ngOnInit() {
-    console.log('On Init');
-  }
+  public ngOnInit() {}
 }

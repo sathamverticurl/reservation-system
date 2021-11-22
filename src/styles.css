@@ -199,12 +199,15 @@ button.success {
     border-radius: 5px;
     cursor: pointer;
 }
-button.primary {
+button.primary.active {
     background: #2e89d8;
+    cursor: pointer;
+}
+button.primary {
+    background: #8ac0f0;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
 }
 button.disabled {
     background: #c5a3ac;
@@ -241,6 +244,9 @@ button.search {
 .paddingR10 {
     padding-right: 10px;
 }
+.paddingB3 {
+    padding-bottom: 3px;
+}
 .paddingB5 {
     padding-bottom: 5px;
 }
@@ -255,6 +261,9 @@ button.search {
 }
 .paddingL10 {
     padding-left: 10px;
+}
+.marginB5 {
+    margin-bottom: 5px;
 }
 
 /*Miscellaneous
@@ -285,5 +294,6 @@ button.search {
 }
 .required {
     color: red;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
 }

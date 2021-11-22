@@ -15,7 +15,7 @@ section {
 }
 .leftDiv, .rightDiv {
     border: 1px solid gray;
-    margin: 5px;
+    margin: 5px 0 5px 0;
     border-radius: 5px;
 }
 .title {
@@ -56,14 +56,40 @@ label, select, input {
 .trainTime p {
     display: inline-block;
 }
+@media only screen and (max-width: 600px){
+    .coaches {
+        flex-direction: column;
+    }
+    .coaches div {
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .coaches div {
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 992px){
+    .coaches div {
+        padding: 15px;
+    }
+}
 .coaches div {
     border: 1px solid lightgray;
     border-radius: 5px;
     cursor: pointer;
-    padding: 15px;
+}
+.available {
+    color: #378d37;
+}
+.waiting {
+    color: orange;
 }
 .selected {
     background: lightblue;
+}
+.price {
+    font-size: 12px;
 }
 .book button {
     width: 75px;

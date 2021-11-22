@@ -33,20 +33,17 @@ export class SectionComponent implements OnInit {
     console.log(this.results);
     this.getStationLists();
   }
-
   public getStationLists() {
     this.stations.getStations().subscribe((val: any) => {
       this.stationLists = val;
     })
   }
-
   public onSubmit() {
-    console.log(this.checkoutForm);
     this.showLoader = true;
     this.booking.getTrains().subscribe((val: any) => {
       this.results = val;
       this.showLoader = false;
-    })
+    });
   }
   public selectCoach(value: any, result: any) {
     result['selectedCoach'] = value;

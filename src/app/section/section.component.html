@@ -76,7 +76,7 @@
         </form>
       </div>
       <div
-        class="rightDiv col-s-12 left"
+        class="rightDiv col-s-12 right"
         [ngClass]="{ 'd-flex': results.length > 0 }"
       >
         <div class="col-s-12 col-m-12 col-l-12" *ngIf="results.length > 0; else elseBlock">
@@ -99,25 +99,13 @@
               </p>
             </div>
             <div class="coaches d-flex justify-c-btwn paddingB15">
-              <div class="sleeper" (click)="selectCoach('sleeper', result)" [ngClass]="{'selected': result.selectedCoach === 'sleeper'}">
-                <h4>Sleeper (SL)</h4>
-                <h4>Available (200)</h4>
-                <p>Rs. 250</p>
-              </div>
-              <div class="ac-3" (click)="selectCoach('ac-3', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-3'}">
-                <h4>AC 3-Tier (AC-3)</h4>
-                <h4>Available (200)</h4>
-                <p>Rs. 500</p>
-              </div>
-              <div class="ac-2" (click)="selectCoach('ac-2', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-2'}">
-                <h4>AC 2-Tier (AC-2)</h4>
-                <h4>Available (400)</h4>
-                <p>Rs. 750</p>
-              </div>
-              <div class="ac-1" (click)="selectCoach('ac-1', result)" [ngClass]="{'selected': result.selectedCoach === 'ac-1'}">
-                <h4>AC 1-Tier (AC-1)</h4>
-                <h4>Available (300)</h4>
-                <p>Rs. 1000</p>
+              <div *ngFor="let coaches of result.coaches" (click)="selectCoach(coaches.key, result)" [ngClass]="{'selected': result.selectedCoach === coaches.key}">
+                <h4>{{coaches.name}}</h4>
+                <h4 class="available" *ngIf="coaches.availableSeats; else coachElse">AVAILABLE-{{coaches.availableSeats}}</h4>
+                <ng-template #coachElse>
+                  <h4 class="waiting">WL-{{coaches.waitingLists}}</h4>
+                </ng-template>
+                <p class="price"><strong>Rs.{{coaches.price}}</strong></p>
               </div>
             </div>
             <div class="book text-right paddingB15">

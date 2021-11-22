@@ -1,13 +1,3 @@
-section {
-  position: fixed;
-  top: 44px;
-  left: 16.66%;
-  height: 100%;
-  width: 83.33%;
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  overflow: scroll;
-}
 .row {
   justify-content: space-between;
 }
@@ -110,9 +100,4 @@ input {
 }
 .book button {
   width: 75px;
-}
-.emptyData {
-  height: 100px;
-  justify-content: center;
-  align-items: center;
 }

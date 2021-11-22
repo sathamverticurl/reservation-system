@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionComponent } from './section/section.component';
 import { BookTicketComponent } from './book-ticket/book-ticket.component';
+import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { BookTicketComponent } from './book-ticket/book-ticket.component';
     FooterComponent,
     SidebarComponent,
     SectionComponent,
-    BookTicketComponent
+    BookTicketComponent,
+    MyBookingsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

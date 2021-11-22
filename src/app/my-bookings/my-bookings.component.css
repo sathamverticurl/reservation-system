@@ -1,0 +1,21 @@
+.row {
+    margin: 5px 0 5px 0;
+}
+.bookedInfo {
+    font-size: 14px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    margin-right: 5px;
+}
+@media only screen and (max-width: 600px){
+    .bookedInfo {
+        margin-bottom: 10px;
+    }
+}
+.emptyData {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 14px;
+}

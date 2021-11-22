@@ -12,4 +12,7 @@ export class BookingService {
   public bookTicket(dataObj: any) {
     return this.http.post('https://619b74e427827600174455ec.mockapi.io/myBookings', dataObj);
   }
+  public myBookings() {
+    return this.http.get('https://619b74e427827600174455ec.mockapi.io/myBookings');
+  }
 }

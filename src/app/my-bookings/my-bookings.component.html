@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <div *ngIf="bookedData.length > 0; else elseBlock" class="row">
+        <div class="col-s-12 col-m-4 col-l-4" *ngFor="let bookedData of bookedData">
+            <div class="bookedInfo">
+                <p class="paddingB10"><strong>Name: </strong>{{bookedData.name}}</p>
+                <p class="paddingB10"><strong>Age: </strong>{{bookedData.age}}</p>
+                <p class="paddingB10"><strong>Train Name: </strong>{{bookedData?.trainName}}</p>
+                <p class="paddingB10"><strong>Travel Date: </strong>{{bookedData?.date?.fromDate}}</p>
+                <p class="paddingB10"><strong>Train Time: </strong>{{bookedData?.time?.fromTime}}</p>
+            </div>  
+        </div>
+    </div>
+    <ng-template #elseBlock>
+      <div class="d-flex emptyData">
+        <p>No data found..</p>
+      </div>
+    </ng-template>
+  </div>
+</section>
